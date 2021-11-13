@@ -26,18 +26,17 @@ const questions = [
       },
       {
         type: 'input',
-        message: 'How can people contribute?',
+        message: 'Enter informations about how people can contribute.',
         name: 'contribute',
       },
       {
           type: 'input',
-          message: 'If your application has tests, say how to use them here',
+          message: 'Enter any problems found in the tests performed.',
           name: 'test',
-          default: 'npm test',
       },
       {
         type: 'input',
-        message: 'What is your GitHub username?',
+        message: 'Enter your GitHub username.',
         name: 'gitHubUser',
       },
       {
@@ -48,19 +47,64 @@ const questions = [
 
       {
         type: 'input',
-        message:'What is your email address?',
+        message:'Enter your email address.',
         name:'email',
       },
       {
         type:'list',
         name: 'license',
-        message: "What kind of license you are using?",
+        message: "Choose one project license for your project.",
         choices: [
           'MIT',
           'GNU',
           'None'
         ]}
     ]
+
+    function generatePage() {
+        inquirer.prompt(questions)
+      .then((response)=> {
+        console.log(response)
+
+        ## Description:
+    ${response.description}
+        
+        
+## Table of contents
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
+        
+## Installation
+    ${response.install}
+
+## Usage
+    ${response.usage}
+    Install node.js, download the file in your computer and open in VS code or terminal. Run node index.js and answer all the questions.
+  
+## License
+   ${genLicense}
+  
+## Contributing
+    ${response.contribute}
+    [Covenant Contributor](https://www.contributor-covenant.org/)
+
+    ![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
+    
+## Tests
+    ${response.test}
+
+## Questions
+    For questions please contact: ${response.author}
+    at  ${response.email}
+
+    Github Profile: ${profile} `
+});
+}
 
 
 // TODO: Create a function to write README file
