@@ -1,8 +1,9 @@
-# rafdas
-    This project is licensed under the [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](#license) .
+# dsfgsdfgdfs
+    This project is licensed under the [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](#license).
+    This is the license link  https://opensource.org/licenses/MIT.
         
     ## Description:
-    fasdf
+    asdfasdfa sd fsa dfajksfd kask df a sdfkj ajsdhf kasj df as dfask dfkjhasgdfas  dfask jdhjgfasd f aksjdgf a sfd asjkhdfgas dfkjh asjdhf gas df as df asgdhfjg asdfkajhsg fs dk
         
         
     ## Table of contents
@@ -15,9 +16,14 @@
     * [Questions](#questions)
         
     ## Installation
-    asdfasdf
+    npm init -y
+
     ## Usage
-    asdfas
+    See the steps
+    Install node.js, download the file in your computer and open in VS code or terminal. Run node index.js and answer all the questions.
+    ![See the steps](assets/images/step1.png)
+    ![See the steps](assets/images/step2.png)
+    ![See the steps](assets/images/step3.png)
     ## License
    MIT License
 
@@ -40,11 +46,18 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+  
     ## Contributing
-    asdfas
+    ajksdhfh as djfhas kdjfhas df kasjdhf as
+    [Covenant Contributor](https://www.contributor-covenant.org/)
+
+    ![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
+    
     ## Tests
-    asdfasdfadd
+    npm test
+
     ## Questions
-    For questions please contact: asdfasdf
-    at  fsadfadfadf
-    Github Profile: https://github.com/fasdfsa 
+    For questions please contact: fgdsdfgs
+    at  rrafa203@gmail.com
+
+    Github Profile: https://github.com/raf203 
