@@ -1,7 +1,7 @@
-// TODO: Include packages needed for this application
+//  Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-// TODO: Create an array of questions for user input
+//  Create an array of questions for user input
 const questions = [
     {
       type: 'input',
@@ -17,7 +17,7 @@ const questions = [
       type: 'input',
       message: 'Enter the installation instructions.',
       name: 'install',
-      default: 'npm init',
+      default: 'Install npm and inquirer.',
     },
     {
         type: 'input',
@@ -60,13 +60,50 @@ const questions = [
           'None'
         ]}
     ]
-
-    function generatePage() {
+// Create a function to initialize app
+    function init() {
         inquirer.prompt(questions)
       .then((response)=> {
         console.log(response)
-
-        ## Description:
+    
+        // Licenses
+        //MIT
+        if(response.license == 'MIT')
+        {
+          genLicense = fs.readFileSync('MIT.txt', 'utf-8')
+          licenseBadge = `[![MIT License](https://img.shields.io/badge/license-${response.license}-red.svg)](#license)`
+          licenseLink = ` https://opensource.org/licenses/MIT`
+        }
+        //GNU
+        else if (response.license == 'GNU')
+        {
+          genLicense = fs.readFileSync('GNU.txt', 'utf-8') 
+    
+          licenseBadge = `[![GNU License](https://img.shields.io/badge/license-${response.license}-red.svg)](#license)`
+          licenseLink = `https://opensource.org/licenses/GPL-3.0`
+            
+        }
+        
+        // No License
+        else if(response.license == 'None')
+        {
+          genLicense = 'No license specified'
+          licenseBadge = `https://choosealicense.com/(#license)`
+    
+        }
+    
+        // Define name of created file
+        const fileName = 'ReadMeCreated.md'
+    
+        // GitHub
+        const profile = "https://github.com/" + response.gitHubUser
+        
+        // Read me's structure
+      let readContents = `# ${response.title}
+This project is licensed under the ${licenseBadge}.
+This is the license link ${licenseLink}.
+        
+## Description:
     ${response.description}
         
         
@@ -84,34 +121,28 @@ const questions = [
 
 ## Usage
     ${response.usage}
-    Install node.js, download the file in your computer and open in VS code or terminal. Run node index.js and answer all the questions.
-  
+    
 ## License
    ${genLicense}
   
 ## Contributing
     ${response.contribute}
-    [Covenant Contributor](https://www.contributor-covenant.org/)
-
-    ![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
     
 ## Tests
     ${response.test}
 
 ## Questions
-    For questions please contact: ${response.author}
-    at  ${response.email}
+    Any problem you can contact: ${response.name}
+    Email:  ${response.email}
 
-    Github Profile: ${profile} `
-});
-}
+    Github: ${profile} `
+    
+    
+// Create README file
+    fs.writeFile(fileName, readContents, (err) => err ? console.log(err) : console.log('Read me file created!'))
+      });
+      }
 
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {}
 
 // Function call to initialize app
 init();
