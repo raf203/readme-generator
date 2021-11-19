@@ -1,9 +1,9 @@
-# Read me
+# Read Me Generator
 This project is licensed under the [![MIT License](https://img.shields.io/badge/license-MIT-red.svg)](#license).
 This is the license link  https://opensource.org/licenses/MIT.
         
 ## Description:
-test
+It's an app that helps to create a Read Me file for your projects.
         
         
 ## Table of contents
@@ -19,7 +19,7 @@ test
 Install npm and inquirer.
 
 ## Usage
-dkjofajskdhf naskdfiusad fkjhas dfsajk dfkj as
+A good Read Me file is very important for your project. For this, it was created with the main topics of your project that must be in the file. Through the terminal, you will receive some questions that, after answered, will generate the Read Me file. Walkthrought: https://www.youtube.com/watch?v=EPq0EH7jRiU
     
 ## License
 MIT License
@@ -45,13 +45,13 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
   
 ## Contributing
-cklajslkdc lkadk
+You can contact the author. Informations can be found in the Question's section.
     
 ## Tests
-lkasjfdlkas fas 
+If you encouter nay problems in your tests, please contact the author.
 
 ## Questions
-Any problem you can contact: Rafael
+Any problem you can contact: Rafael Cardoso
 Email:  rrafa203@gmail.com
 
 Github: https://github.com/raf203 
